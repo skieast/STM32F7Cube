@@ -1,0 +1,282 @@
+<!DOCTYPE CrossStudio_Project_File>
+<solution Name="Project" target="8" version="2">
+  <project Name="STM32F7Demo">
+    <configuration
+      Name="Common"
+      Placement="Flash"
+      Target="STM32F756IG"
+      arm_architecture="v7EM"
+      arm_core_type="Cortex-M7"
+      arm_fp_abi="Hard"
+      arm_fpu_type="FPv5-SP-D16"
+      arm_gcc_target="arm-unknown-eabi"
+      arm_linker_heap_size="128"
+      arm_linker_jtag_pad_pre_dr="1"
+      arm_linker_jtag_pad_pre_ir="5"
+      arm_linker_process_stack_size="0"
+      arm_linker_stack_size="256"
+      arm_simulator_memory_simulation_filename="$(TargetsDir)/STM32/STM32SimulatorMemory.dll"
+      arm_simulator_memory_simulation_parameter="STM32F756IG;0x100000;0x50000"
+      arm_target_connect_with_reset="Yes"
+      arm_target_debug_interface_type="ADIv5"
+      arm_target_interface_type="Default"
+      arm_target_loader_applicable_loaders="Flash"
+      arm_target_loader_default_loader="Flash"
+      arm_target_restrict_memory_accesses="Yes"
+      c_preprocessor_definitions="STM32F756xx;USE_HAL_DRIVER;USE_STM32756G_EVAL;USE_USB_HS;USE_IOEXPANDER"
+      c_user_include_directories="$(TargetsDir)/CMSIS_3/CMSIS/Include;./../inc;./../STemWin_Addons;./../Config;./../Core/inc;./../Modules/vncserver;./../../../../Utilities/CPU;./../../../../Drivers/CMSIS/Include;./../../../../Drivers/CMSIS/Device/ST/STM32F7xx/Include;./../../../../Drivers/STM32F7xx_HAL_Driver/Inc;./../../../../Drivers/BSP/STM32756G_EVAL;./../../../../Drivers/BSP/Components;./../../../../Drivers/BSP/Components/Common;./../../../../Middlewares/ST/STM32_USB_Host_Library/Core/Inc;./../../../../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc;./../../../../Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Inc;./../../../../Middlewares/ST/STemWin/inc;./../../../../Middlewares/Third_Party/FatFs/src;./../../../../Middlewares/Third_Party/FatFs/src/drivers;./../../../../Middlewares/Third_Party/FreeRTOS/Source/portable/IAR/ARM_CM7/r0p1;./../../../../Middlewares/Third_Party/FreeRTOS/Source/include;./../../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS;./../Modules/audio_player/Addons/SpiritDSP_Equalizer;./../Modules/audio_player/Addons/SpiritDSP_LoudnessControl"
+      debug_register_definition_file="$(TargetsDir)/STM32/STM32F756x_Peripherals.xml"
+      linker_memory_map_file="$(TargetsDir)/STM32/STM32F756IG_MemoryMap.xml"
+      linker_section_placement_file="$(StudioDir)/targets/Cortex_M/flash_placement.xml"
+      project_directory=""
+      project_type="Executable"
+      property_groups_file_path="$(TargetsDir)/STM32/propertyGroups.xml"
+      target_get_partname_script="GetPartName()"
+      target_match_partname_script="MatchPartName(&quot;$(Target)&quot;)"
+      target_script_file="$(TargetsDir)/STM32/STM32_Target.js"
+      target_trace_initialize_script="EnableTrace(&quot;$(TraceInterfaceType)&quot;)" />
+    <folder Name="Source Files">
+      <configuration Name="Common" filter="c;cpp;cxx;cc;h;s;asm;inc" />
+    </folder>
+    <folder Name="Application">
+      <folder Name="EWARM">
+        <file file_name="./startup_stm32f756xx.s">
+          <configuration Name="Common" build_exclude_from_build="Yes" />
+        </file>
+      </folder>
+      <folder Name="User">
+        <folder Name="Core">
+          <file file_name="./../Core/Src/k_bsp.c" />
+          <file file_name="./../Core/Src/k_menu.c" />
+          <file file_name="./../Core/Src/k_module.c" />
+          <file file_name="./../Core/Src/k_modules_res.c" />
+          <file file_name="./../Core/Src/k_rtc.c" />
+          <file file_name="./../Core/Src/k_startup.c">
+            <configuration Name="Common" build_exclude_from_build="Yes" />
+          </file>
+          <file file_name="./../Core/Src/k_storage.c" />
+          <file file_name="./../Core/Src/main.c" />
+          <file file_name="./../Core/Src/stm32f7xx_it.c" />
+        </folder>
+        <folder Name="Modules">
+          <folder Name="Audio">
+            <folder Name="Addons">
+              <file file_name="./../Modules/audio_player/Addons/SpiritDSP_Equalizer/lib_equalizer_cortex_m4.a" />
+              <file file_name="./../Modules/audio_player/Addons/SpiritDSP_LoudnessControl/lib_loudness_cortex_m4.a" />
+            </folder>
+            <file file_name="./../Modules/audio_player/audio_player_app.c" />
+            <file file_name="./../Modules/audio_player/audio_player_win.c" />
+          </folder>
+          <folder Name="games">
+            <file file_name="./../Modules/games/games_win.c" />
+          </folder>
+          <folder Name="gardening_control">
+            <file file_name="./../Modules/gardening_control/gardening_control_win.c" />
+          </folder>
+          <folder Name="home_alarm">
+            <file file_name="./../Modules/home_alarme/home_alarm_win.c" />
+          </folder>
+          <folder Name="settings">
+            <file file_name="./../Modules/settings/settings_win.c" />
+          </folder>
+          <folder Name="VideoPlayer">
+            <file file_name="./../Modules/videoplayer/video_player_win.c" />
+          </folder>
+        </folder>
+        <folder Name="Utilities">
+          <file file_name="./../../../../Utilities/CPU/cpu_utils.c" />
+        </folder>
+      </folder>
+    </folder>
+    <folder Name="Drivers">
+      <folder Name="BSP">
+        <folder Name="Component">
+          <file file_name="./../../../../Drivers/BSP/Components/exc7200/exc7200.c" />
+          <file file_name="./../../../../Drivers/BSP/Components/mfxstm32l152/mfxstm32l152.c" />
+          <file file_name="./../../../../Drivers/BSP/Components/stmpe811/stmpe811.c" />
+          <file file_name="./../../../../Drivers/BSP/Components/ts3510/ts3510.c" />
+          <file file_name="./../../../../Drivers/BSP/Components/wm8994/wm8994.c" />
+        </folder>
+        <folder Name="STM32756G_EVAL">
+          <file file_name="./../../../../Drivers/BSP/STM32756G_EVAL/stm32756g_eval.c" />
+          <file file_name="./../../../../Drivers/BSP/STM32756G_EVAL/stm32756g_eval_audio.c" />
+          <file file_name="./../../../../Drivers/BSP/STM32756G_EVAL/stm32756g_eval_io.c" />
+          <file file_name="./../../../../Drivers/BSP/STM32756G_EVAL/stm32756g_eval_nor.c" />
+          <file file_name="./../../../../Drivers/BSP/STM32756G_EVAL/stm32756g_eval_sdram.c" />
+          <file file_name="./../../../../Drivers/BSP/STM32756G_EVAL/stm32756g_eval_ts.c" />
+        </folder>
+      </folder>
+      <folder Name="CMSIS">
+        <file file_name="./../Core/Src/system_stm32f7xx.c" />
+      </folder>
+      <folder Name="STM32F7xx_HAL_Drivers">
+        <file file_name="./../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal.c" />
+        <file file_name="./../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_adc.c" />
+        <file file_name="./../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_adc_ex.c" />
+        <file file_name="./../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_can.c" />
+        <file file_name="./../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_cec.c" />
+        <file file_name="./../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_cortex.c" />
+        <file file_name="./../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_crc.c" />
+        <file file_name="./../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_crc_ex.c" />
+        <file file_name="./../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_cryp.c" />
+        <file file_name="./../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_cryp_ex.c" />
+        <file file_name="./../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dac.c" />
+        <file file_name="./../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dac_ex.c" />
+        <file file_name="./../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dcmi.c" />
+        <file file_name="./../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma.c" />
+        <file file_name="./../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma2d.c" />
+        <file file_name="./../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma_ex.c" />
+        <file file_name="./../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_eth.c" />
+        <file file_name="./../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_flash.c" />
+        <file file_name="./../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_flash_ex.c" />
+        <file file_name="./../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_gpio.c" />
+        <file file_name="./../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_hash.c" />
+        <file file_name="./../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_hash_ex.c" />
+        <file file_name="./../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_hcd.c" />
+        <file file_name="./../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_i2c.c" />
+        <file file_name="./../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_i2c_ex.c" />
+        <file file_name="./../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_i2s.c" />
+        <file file_name="./../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_irda.c" />
+        <file file_name="./../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_iwdg.c" />
+        <file file_name="./../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_lptim.c" />
+        <file file_name="./../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c" />
+        <file file_name="./../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_msp_template.c" />
+        <file file_name="./../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_nor.c" />
+        <file file_name="./../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pcd.c" />
+        <file file_name="./../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pcd_ex.c" />
+        <file file_name="./../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pwr.c" />
+        <file file_name="./../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pwr_ex.c" />
+        <file file_name="./../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_qspi.c" />
+        <file file_name="./../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc.c" />
+        <file file_name="./../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc_ex.c" />
+        <file file_name="./../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rng.c" />
+        <file file_name="./../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rtc.c" />
+        <file file_name="./../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rtc_ex.c" />
+        <file file_name="./../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_sai.c" />
+        <file file_name="./../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_sai_ex.c" />
+        <file file_name="./../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_sd.c" />
+        <file file_name="./../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_sdram.c" />
+        <file file_name="./../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_smartcard.c" />
+        <file file_name="./../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_smartcard_ex.c" />
+        <file file_name="./../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_spdifrx.c" />
+        <file file_name="./../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_spi.c" />
+        <file file_name="./../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_sram.c" />
+        <file file_name="./../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim.c" />
+        <file file_name="./../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim_ex.c" />
+        <file file_name="./../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_uart.c" />
+        <file file_name="./../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_usart.c" />
+        <file file_name="./../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_wwdg.c" />
+        <file file_name="./../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_ll_fmc.c" />
+        <file file_name="./../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_ll_sdmmc.c" />
+        <file file_name="./../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_ll_usb.c" />
+      </folder>
+    </folder>
+    <folder Name="Middlewares">
+      <folder Name="FatFs">
+        <folder Name="Core">
+          <file file_name="./../../../../Middlewares/Third_Party/FatFs/src/diskio.c" />
+          <file file_name="./../../../../Middlewares/Third_Party/FatFs/src/ff.c" />
+          <file file_name="./../../../../Middlewares/Third_Party/FatFs/src/ff_gen_drv.c" />
+        </folder>
+        <folder Name="Drivers">
+          <file file_name="./../../../../Middlewares/Third_Party/FatFs/src/drivers/usbh_diskio.c" />
+        </folder>
+        <folder Name="Options">
+          <file file_name="./../../../../Middlewares/Third_Party/FatFs/src/option/syscall.c" />
+          <file file_name="./../../../../Middlewares/Third_Party/FatFs/src/option/unicode.c" />
+        </folder>
+      </folder>
+      <folder Name="FreeRTOS">
+        <folder Name="Portable">
+          <file file_name="./../../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c" />
+          <file file_name="./../../../../Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c" />
+          <file file_name="./../../../../Middlewares/Third_Party/FreeRTOS/Source/portable/IAR/ARM_CM7/r0p1/port.c" />
+          <file file_name="./../../../../Middlewares/Third_Party/FreeRTOS/Source/portable/IAR/ARM_CM7/r0p1/portasm.s">
+            <configuration Name="Common" build_exclude_from_build="Yes" />
+          </file>
+        </folder>
+        <file file_name="./../../../../Middlewares/Third_Party/FreeRTOS/Source/croutine.c" />
+        <file file_name="./../../../../Middlewares/Third_Party/FreeRTOS/Source/event_groups.c" />
+        <file file_name="./../../../../Middlewares/Third_Party/FreeRTOS/Source/list.c" />
+        <file file_name="./../../../../Middlewares/Third_Party/FreeRTOS/Source/queue.c" />
+        <file file_name="./../../../../Middlewares/Third_Party/FreeRTOS/Source/tasks.c" />
+        <file file_name="./../../../../Middlewares/Third_Party/FreeRTOS/Source/timers.c" />
+      </folder>
+      <folder Name="PDM">
+        <file file_name="./../../../../Middlewares/ST/STM32_Audio/Addons/PDM/libPDMFilter_CM7_IAR.a" />
+      </folder>
+      <folder Name="ST_Widgets">
+        <file file_name="./../STemWin_Addons/ST_Addons_IAR.a" />
+      </folder>
+      <folder Name="STemWin">
+        <folder Name="Config">
+          <file file_name="./../Config/GUIConf.c" />
+          <file file_name="./../Config/LCDConf.c" />
+        </folder>
+        <folder Name="Library">
+          <file file_name="./../../../../Middlewares/ST/STemWin/Lib/STemWin528_CM7_OS_IAR_ot.a" />
+        </folder>
+        <folder Name="OS">
+          <file file_name="./../Config/GUI_X_FreeRTOS.c" />
+          <file file_name="./../../../../Middlewares/ST/STemWin/OS/GUI_X_OS.c" />
+        </folder>
+      </folder>
+      <folder Name="USBH_Library">
+        <folder Name="Class">
+          <folder Name="MSC">
+            <file file_name="./../../../../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc.c" />
+            <file file_name="./../../../../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_bot.c" />
+            <file file_name="./../../../../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_scsi.c" />
+          </folder>
+        </folder>
+        <folder Name="Config">
+          <file file_name="./../Config/usbh_conf.c" />
+        </folder>
+        <folder Name="Core">
+          <file file_name="./../../../../Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_core.c" />
+          <file file_name="./../../../../Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_ctlreq.c" />
+          <file file_name="./../../../../Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_ioreq.c" />
+          <file file_name="./../../../../Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_pipes.c" />
+        </folder>
+      </folder>
+    </folder>
+    <configuration
+      Name="Flash"
+      arm_target_flash_loader_file_path="$(TargetsDir)/STM32/Release/STM32F2xx_Loader_rpc.elf"
+      arm_target_flash_loader_type="LIBMEM RPC Loader"
+      arm_target_loader_can_erase_all="Yes"
+      arm_target_loader_can_lock_all="No"
+      arm_target_loader_can_lock_range="No"
+      arm_target_loader_can_unlock_all="No"
+      arm_target_loader_can_unlock_range="No"
+      target_reset_script="FLASHReset()" />
+    <configuration Name="RAM" target_reset_script="Reset()" />
+    <folder Name="System Files">
+      <file file_name="$(StudioDir)/source/thumb_crt0.s" />
+      <file file_name="$(TargetsDir)/STM32/STM32_Startup.s" />
+    </folder>
+  </project>
+  <configuration Name="THUMB Debug" inherited_configurations="THUMB;Debug" />
+  <configuration
+    Name="THUMB"
+    Platform="ARM"
+    arm_instruction_set="Thumb"
+    arm_library_instruction_set="Thumb"
+    c_preprocessor_definitions="__THUMB"
+    hidden="Yes" />
+  <configuration
+    Name="Debug"
+    c_preprocessor_definitions="DEBUG"
+    gcc_debugging_level="Level 3"
+    gcc_optimization_level="None"
+    hidden="Yes" />
+  <configuration
+    Name="THUMB Release"
+    inherited_configurations="THUMB;Release" />
+  <configuration
+    Name="Release"
+    c_preprocessor_definitions="NDEBUG"
+    gcc_debugging_level="Level 1"
+    gcc_optimization_level="Level 1"
+    hidden="Yes" />
+</solution>

@@ -1,0 +1,207 @@
+<!DOCTYPE CrossStudio_Project_File>
+<solution Name="Project" target="8" version="2">
+  <project Name="Project" template_name="">
+    <configuration
+      Name="Common"
+      Target="STM32F756IG"
+      c_preprocessor_definitions="USE_HAL_DRIVER;STM32F756xx;USE_STM32756G_EVAL;USE_IOEXPANDER;USE_MB1063"
+      c_user_include_directories="$(TargetsDir)/CMSIS_3/CMSIS/Include;./../Inc;./../Demo;./../../../../../../Drivers/CMSIS/Device/ST/STM32F7xx/Include;./../../../../../../Drivers/CMSIS/Include;./../../../../../../Drivers/STM32F7xx_HAL_Driver/Inc;./../../../../../../Drivers/BSP/STM32756G_EVAL;./../../../../../../Drivers/BSP/Components/Common;./../../../../../../Drivers/BSP/Components;./../../../../../../Middlewares/ST/STemWin/inc;./../../../../../../Utilities;./../../../../../../Utilities/Fonts" project_directory=""
+      project_type="Executable" />
+    <folder Name="Source Files" />
+    <folder Name="Application">
+      <folder Name="Demo">
+        <file file_name="./../Demo/GUIDEMO.c" />
+        <file file_name="./../Demo/GUIDEMO_AntialiasedText.c" />
+        <file file_name="./../Demo/GUIDEMO_Automotive.c" />
+        <file file_name="./../Demo/GUIDEMO_BarGraph.c" />
+        <file file_name="./../Demo/GUIDEMO_Bitmap.c" />
+        <file file_name="./../Demo/GUIDEMO_ColorBar.c" />
+        <file file_name="./../Demo/GUIDEMO_Conf.c" />
+        <file file_name="./../Demo/GUIDEMO_Cursor.c" />
+        <file file_name="./../Demo/GUIDEMO_Fading.c" />
+        <file file_name="./../Demo/GUIDEMO_Graph.c" />
+        <file file_name="./../Demo/GUIDEMO_IconView.c" />
+        <file file_name="./../Demo/GUIDEMO_ImageFlow.c" />
+        <file file_name="./../Demo/GUIDEMO_Intro.c" />
+        <file file_name="./../Demo/GUIDEMO_Listview.c" />
+        <file file_name="./../Demo/GUIDEMO_RadialMenu.c" />
+        <file file_name="./../Demo/GUIDEMO_Resource.c" />
+        <file file_name="./../Demo/GUIDEMO_Skinning.c" />
+        <file file_name="./../Demo/GUIDEMO_Speed.c" />
+        <file file_name="./../Demo/GUIDEMO_Speedometer.c" />
+        <file file_name="./../Demo/GUIDEMO_Start.c" />
+        <file file_name="./../Demo/GUIDEMO_TransparentDialog.c" />
+        <file file_name="./../Demo/GUIDEMO_Treeview.c" />
+        <file file_name="./../Demo/GUIDEMO_VScreen.c" />
+        <file file_name="./../Demo/GUIDEMO_WashingMachine.c" />
+        <file file_name="./../Demo/GUIDEMO_ZoomAndRotate.c" />
+      </folder>
+      <folder Name="EWARM">
+        <file file_name="./startup_stm32f756xx.s">
+          <configuration Name="Common" build_exclude_from_build="Yes" />
+        </file>
+      </folder>
+      <folder Name="User">
+        <file file_name="./../Src/calibration.c" />
+        <file file_name="./../Src/main.c" />
+        <file file_name="./../Src/rtc.c" />
+        <file file_name="./../Src/stm32f7xx_it.c" />
+      </folder>
+    </folder>
+    <folder Name="Doc">
+      <file file_name="./../readme.txt" />
+    </folder>
+    <folder Name="Drivers">
+      <folder Name="BSP">
+        <folder Name="Components">
+          <file file_name="./../../../../../../Drivers/BSP/Components/exc7200/exc7200.c" />
+          <file file_name="./../../../../../../Drivers/BSP/Components/mfxstm32l152/mfxstm32l152.c" />
+          <file file_name="./../../../../../../Drivers/BSP/Components/stmpe811/stmpe811.c" />
+          <file file_name="./../../../../../../Drivers/BSP/Components/ts3510/ts3510.c" />
+        </folder>
+        <folder Name="STM32756G_EVAL">
+          <file file_name="./../../../../../../Drivers/BSP/STM32756G_EVAL/stm32756g_eval.c" />
+          <file file_name="./../../../../../../Drivers/BSP/STM32756G_EVAL/stm32756g_eval_io.c" />
+          <file file_name="./../../../../../../Drivers/BSP/STM32756G_EVAL/stm32756g_eval_sdram.c" />
+          <file file_name="./../../../../../../Drivers/BSP/STM32756G_EVAL/stm32756g_eval_ts.c" />
+        </folder>
+      </folder>
+      <folder Name="CMSIS">
+        <file file_name="./../Src/system_stm32f7xx.c" />
+      </folder>
+      <folder Name="STM32F7xx_HAL_Driver">
+        <file file_name="./../../../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal.c" />
+        <file file_name="./../../../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_cortex.c" />
+        <file file_name="./../../../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_crc.c" />
+        <file file_name="./../../../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_crc_ex.c" />
+        <file file_name="./../../../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma.c" />
+        <file file_name="./../../../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma2d.c" />
+        <file file_name="./../../../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_flash.c" />
+        <file file_name="./../../../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_flash_ex.c" />
+        <file file_name="./../../../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_gpio.c" />
+        <file file_name="./../../../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_i2c.c" />
+        <file file_name="./../../../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_i2c_ex.c" />
+        <file file_name="./../../../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c" />
+        <file file_name="./../../../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pwr.c" />
+        <file file_name="./../../../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pwr_ex.c" />
+        <file file_name="./../../../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc.c" />
+        <file file_name="./../../../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc_ex.c" />
+        <file file_name="./../../../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rng.c" />
+        <file file_name="./../../../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rtc.c" />
+        <file file_name="./../../../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rtc_ex.c" />
+        <file file_name="./../../../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_sdram.c" />
+        <file file_name="./../../../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim.c" />
+        <file file_name="./../../../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim_ex.c" />
+        <file file_name="./../../../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_uart.c" />
+        <file file_name="./../../../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_ll_fmc.c" />
+      </folder>
+    </folder>
+    <folder Name="Middlewares">
+      <folder Name="STemWin">
+        <folder Name="Config">
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/OS/GUI_X.c" />
+          <file file_name="./../Src/GUIConf.c" />
+          <file file_name="./../Src/LCDConf_stm32756g_eval_MB1063.c" />
+        </folder>
+        <folder Name="inc">
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/BUTTON.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/BUTTON_Private.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/CALENDAR.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/CHECKBOX.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/CHECKBOX_Private.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/CHOOSECOLOR.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/CHOOSEFILE.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/DIALOG.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/DIALOG_Intern.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/DROPDOWN.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/DROPDOWN_Private.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/EDIT.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/EDIT_Private.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/FRAMEWIN.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/FRAMEWIN_Private.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/Global.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/GRAPH.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/GRAPH_Private.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/GUI.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/GUI_ARRAY.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/GUI_ARRAY_Private.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/GUI_BMP_Private.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/GUI_ConfDefaults.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/GUI_Debug.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/GUI_FontIntern.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/GUI_GIF_Private.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/GUI_HOOK.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/GUI_JPEG_Private.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/GUI_Private.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/GUI_SetOrientation.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/GUI_SetOrientationCX.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/GUI_SPRITE_Private.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/GUI_Type.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/GUI_Version.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/GUI_VNC.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/GUIDRV_DCache.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/GUIDRV_DCache_Private.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/GUIDRV_Dist.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/GUIDRV_FlexColor.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/GUIDRV_FlexColor_Private.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/GUIDRV_Generic.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/GUIDRV_Lin.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/GUIDRV_Lin_Opt_16.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/GUIDRV_Lin_Opt_24.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/GUIDRV_Lin_Opt_32.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/GUIDRV_Lin_Opt_8.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/GUIDRV_Lin_Private.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/GUIDRV_NoOpt_1_8.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/GUIDRV_Template.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/GUIDRV_TemplateI.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/GUIDRV_TemplateI_Private.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/HEADER.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/HEADER_Private.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/ICONVIEW.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/ICONVIEW_Private.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/IMAGE.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/IMAGE_Private.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/LCD.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/LCD_ConfDefaults.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/LCD_Private.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/LCD_Protected.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/LCD_SIM.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/LISTBOX.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/LISTBOX_Private.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/LISTVIEW.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/LISTVIEW_Private.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/LISTWHEEL.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/LISTWHEEL_Private.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/MENU.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/MENU_Private.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/MESSAGEBOX.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/MULTIEDIT.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/MULTIPAGE.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/MULTIPAGE_Private.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/PROGBAR.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/PROGBAR_Private.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/RADIO.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/RADIO_Private.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/SCROLLBAR.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/SCROLLBAR_Private.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/SLIDER.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/SLIDER_Private.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/SPINBOX.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/SPINBOX_Private.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/TEXT.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/TEXT_Private.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/TREEVIEW.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/TREEVIEW_Private.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/WIDGET.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/WINDOW_Private.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/WM.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/WM_GUI.h" />
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/inc/WM_Intern.h" />
+        </folder>
+        <folder Name="Lib">
+          <file file_name="./../../../../../../Middlewares/ST/STemWin/Lib/STemWin528_CM7_IAR.a" />
+        </folder>
+      </folder>
+    </folder>
+  </project>
+</solution>
